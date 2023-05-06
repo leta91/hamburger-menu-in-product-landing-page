@@ -1,0 +1,288 @@
+body {
+	padding: 0;
+	margin: 0;
+    font-family: Calibri;
+	font-size: 18px;
+    background-color: #F0EBE3; 
+	width: 100%;
+	height: auto; 
+}
+
+h2, h4, h5 {
+	margin-left: 10px;
+}
+
+.wrappingVideo {
+	position: relative;
+	padding-top: 40%;
+	width: 50%;
+	margin: auto;
+  }
+
+  .wrappingVideo iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+  }
+
+.container {
+	position: relative;
+	margin-top: 100px;
+}
+
+nav {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	padding: 0 5%;
+	height: 100px;
+	background-color: #E4DCCF;
+}
+
+nav #header {
+	float: left;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	color: #576F72;
+    font-family: monospace;
+    font-style: italic;
+}
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+nav .links li {
+	list-style: none;
+}
+
+nav .links a {
+	display: block;
+	padding: 1em;
+	font-size: 19px;
+	font-weight: bold;
+	color: #7D9D9C;
+	text-decoration: none;
+}
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #7a4988;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+	nav #header {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: #576F72;
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+
+	nav .links a {
+		font-size: 17px;
+	}
+	nav :checked ~ .links {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+	
+}
+
+#header-img {
+    width: 80px;
+    height: 60px;
+    margin-right: 5px;
+}
+
+/* container content */
+
+i {
+    font-size: 18px;
+    color: #7D9D9C;
+    display: block;
+}
+
+a {
+	color: #7D9D9C;
+	text-decoration: none;
+	font-weight: bold;
+   }
+   
+   a:hover {
+	   color: #7a4988; 
+   }
+   
+   input {
+	font-family: Calibri;
+	font-size: 16px;
+   }
+
+   footer p {
+    font-size: 14px;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#submit {
+    width: 100px;
+    height: 30px;
+    background-color: #7D9D9C;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+} 
+
+#email {
+    width: 180px;
+    height: 30px;
+	margin-left: 10px;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-evenly;
+	  color: #576F72;
+	  flex-wrap: wrap;
+	  align-items: center;
+	  padding-inline-start: 0;
+	  margin-block: 0;
+	  height: 100%;
+	  margin-right: 10px;
+	  padding: 15px;
+	  overflow: hidden;
+	  list-style-type: none; 
+  }
+  
+  nav ul li {
+	  padding-right: 10px;
+  }
+
+  p {
+	  color: #05445e;
+	  padding-left: 1em;
+	  padding-right: 1em;
+  }
+
+ .table-text {
+	color: #05445e;
+ }
+  
+h2, h3, h4, h5 {
+ color: #7a4988;
+ padding-top: 60px;
+ margin-top: 0;
+}
+
+  /*styling for pricing tables*/
+	
+.columns {
+ float: left;
+ width: 33.3%;
+ padding: 8px;
+ margin-bottom: 45px;
+}
+	
+.price {
+ list-style-type: none;
+ border: 1px solid #7D9D9C;
+ margin: 0;
+ padding: 0;
+ -webkit-transition: 0.3s;
+ transition: 0.3s;
+}
+	
+.price:hover {
+ box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+}
+	
+.price .header {
+ background-color: #7D9D9C;
+ color: white;
+ font-size: 25px;
+}
+	
+.price li {
+ border-bottom: 1px solid #F0EBE3;
+ padding: 20px;
+ text-align: center;
+}
+	
+.table-button {
+ border: 10px solid #576F72;
+}
+	
+@media only screen and (max-width: 600px) {
+ .columns {
+  width: 100%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+   
+.check {
+ color: #576F72;
+}
+  
+.nocheck {
+ color: #7a4988;
+}
+    
